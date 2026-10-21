@@ -1,0 +1,30 @@
+PROJECT_NAME           = "TKJHAT SDK"
+OUTPUT_DIRECTORY       = out
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = ../include/tkjhat
+RECURSIVE              = NO
+GENERATE_TREEVIEW      = YES
+INPUT                  = ../include/tkjhat/sdk.h \
+                         ../include/tkjhat/pins.h \
+                         overview.md
+FILE_PATTERNS          = *.h *.md
+WARN_IF_UNDOCUMENTED   = YES
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+USE_MDFILE_AS_MAINPAGE = overview.md
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = NO
+SHOW_FILES        = YES
+SHOW_DIRECTORIES  = NO
+GENERATE_GROUPS   = YES
+EXTRACT_ALL       = YES  
+SHOW_NAMESPACES      = YES
+
+
+# Diagrams
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = svg
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES

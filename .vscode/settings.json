@@ -1,0 +1,74 @@
+{
+    "cmake.showSystemKits": false,
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.options.advanced": {
+        "build": {
+            "statusBarVisibility": "visible"
+        },
+        "launch": {
+            "statusBarVisibility": "hidden"
+        },
+        "debug": {
+            "statusBarVisibility": "hidden"
+        }
+    },
+    "cmake.configureOnEdit": true,
+    "cmake.automaticReconfigure": true,
+    "cmake.configureOnOpen": true,
+    "cmake.generator": "Ninja",
+    //ADD RIGHT PATH TO NINJA. GENERALLY NINJA IS AUTOMATICALLY DETECTED, BUT FOR SOME REASON NOT ANYMORE. 
+    "cmake.configureArgs": [
+        "-DCMAKE_MAKE_PROGRAM:FILEPATH=${userHome}/.pico-sdk/ninja/v1.12.1/ninja"
+    ],
+    "cmake.cmakePath": "${userHome}/.pico-sdk/cmake/v3.31.5/bin/cmake",
+    "cmake.configureSettings": {
+            "CMAKE_C_COMPILER": "/home/student/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gcc",
+            "CMAKE_CXX_COMPILER": "/home/student/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-g++"
+    },
+    "C_Cpp.debugShortcut": false,
+    "cmake.configureEnvironment": {
+        //"FREERTOS_KERNEL_PATH": "${env:HOME}/.freertos" //It is important that Free-RTOS Kernel is installed in .freertos directly in the home of the user.
+        "FREERTOS_KERNEL_PATH": "${userHome}/.freertos"
+    },
+    "terminal.integrated.env.windows": {
+        "FREERTOS_KERNEL_PATH": "${env:USERPROFILE}/.freertos", 
+        "PICO_SDK_PATH": "${env:USERPROFILE}/.pico-sdk/sdk/2.2.0",
+        "PICO_TOOLCHAIN_PATH": "${env:USERPROFILE}/.pico-sdk/toolchain/14_2_Rel1",
+        "Path": "${env:USERPROFILE}/.pico-sdk/toolchain/14_2_Rel1/bin;${env:USERPROFILE}/.pico-sdk/picotool/2.2.0/picotool;${env:USERPROFILE}/.pico-sdk/cmake/v3.31.5/bin;${env:USERPROFILE}/.pico-sdk/ninja/v1.12.1;${env:PATH}"
+    },
+    "terminal.integrated.env.osx": {
+        "FREERTOS_KERNEL_PATH": "${env:HOME}/.freertos",
+        "PICO_SDK_PATH": "${env:HOME}/.pico-sdk/sdk/2.2.0",
+        "PICO_TOOLCHAIN_PATH": "${env:HOME}/.pico-sdk/toolchain/14_2_Rel1",
+        "PATH": "${env:HOME}/.pico-sdk/toolchain/14_2_Rel1/bin:${env:HOME}/.pico-sdk/picotool/2.2.0/picotool:${env:HOME}/.pico-sdk/cmake/v3.31.5/bin:${env:HOME}/.pico-sdk/ninja/v1.12.1:${env:PATH}"
+    },
+    "terminal.integrated.env.linux": {
+        "FREERTOS_KERNEL_PATH": "${env:HOME}/.freertos",
+        "PICO_SDK_PATH": "${env:HOME}/.pico-sdk/sdk/2.2.0",
+        "PICO_TOOLCHAIN_PATH": "${env:HOME}/.pico-sdk/toolchain/14_2_Rel1",
+        "PATH": "${env:HOME}/.pico-sdk/toolchain/14_2_Rel1/bin:${env:HOME}/.pico-sdk/picotool/2.2.0/picotool:${env:HOME}/.pico-sdk/cmake/v3.31.5/bin:${env:HOME}/.pico-sdk/ninja/v1.12.1:${env:PATH}"
+    },
+    "raspberry-pi-pico.cmakeAutoConfigure": false,
+    "raspberry-pi-pico.useCmakeTools": true,
+    "raspberry-pi-pico.cmakePath": "${HOME}/.pico-sdk/cmake/v3.31.5/bin/cmake",
+    "raspberry-pi-pico.ninjaPath": "${HOME}/.pico-sdk/ninja/v1.12.1/ninja",
+    "files.associations": {
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "ssd1306.h": "c",
+        "tusb.h": "c",
+        "binary_info.h": "c",
+        "sdk.h": "c",
+        "printf.h": "c",
+        "padsbank0.h": "c",
+        "gpio.h": "c",
+        "compare": "c",
+        "cstdint": "c",
+        "string.h": "c",
+        "cstdio": "c",
+        "freertos.h": "c",
+        "pdm_microphone.h": "c",
+        "pins.h": "c",
+        "optional": "c"
+    }
+}
